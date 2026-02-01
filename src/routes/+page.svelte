@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Hero, ExpertiseSection, ValueProposition } from '$lib/components/organisms';
   import { QuoteBlock } from '$lib/components/molecules';
 
@@ -53,7 +54,7 @@
   variant="default"
   showLogo
   ctaLabel="Découvrir notre méthode"
-  ctaHref="/methode"
+  ctaHref="{base}/methode"
 />
 
 <ValueProposition items={valueItems} />

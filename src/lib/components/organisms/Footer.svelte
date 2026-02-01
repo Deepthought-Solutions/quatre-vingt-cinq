@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Logo, Text, Divider } from '../atoms';
 
   const currentYear = new Date().getFullYear();
@@ -6,9 +7,9 @@
   const expertises = ['IT & Digital', 'Industrie', 'Finance', 'RH', 'Fonctions clés'];
 
   const navigation = [
-    { href: '/', label: 'Expertise' },
-    { href: '/methode', label: 'Notre méthode' },
-    { href: '/qui-sommes-nous', label: 'Qui sommes-nous' },
+    { href: `${base}/`, label: 'Expertise' },
+    { href: `${base}/methode`, label: 'Notre méthode' },
+    { href: `${base}/qui-sommes-nous`, label: 'Qui sommes-nous' },
   ];
 </script>
 
@@ -16,7 +17,7 @@
   <div class="footer-container">
     <div class="footer-main">
       <div class="footer-brand">
-        <a href="/" class="logo-link" aria-label="85 Conseil & Recrutement - Accueil">
+        <a href="{base}/" class="logo-link" aria-label="85 Conseil & Recrutement - Accueil">
           <Logo size="md" />
         </a>
         <div class="brand-info">
@@ -76,7 +77,7 @@
         © {currentYear} 85 Conseil & Recrutement. Tous droits réservés.
       </Text>
       <div class="legal-links">
-        <a href="/mentions-legales" class="legal-link">Mentions légales</a>
+        <a href="{base}/mentions-legales" class="legal-link">Mentions légales</a>
       </div>
     </div>
   </div>

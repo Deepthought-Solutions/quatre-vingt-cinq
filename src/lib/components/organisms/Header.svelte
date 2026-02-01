@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Logo, Button } from '../atoms';
   import { NavLink } from '../molecules';
 
@@ -14,9 +15,9 @@
   let { variant = 'default' }: Props = $props();
 
   const navigation: NavItem[] = [
-    { href: '/', label: 'Expertise' },
-    { href: '/methode', label: 'Notre méthode' },
-    { href: '/qui-sommes-nous', label: 'Qui sommes-nous' },
+    { href: `${base}/`, label: 'Expertise' },
+    { href: `${base}/methode`, label: 'Notre méthode' },
+    { href: `${base}/qui-sommes-nous`, label: 'Qui sommes-nous' },
   ];
 
   let mobileMenuOpen = $state(false);
@@ -32,7 +33,7 @@
   class:variant-transparent={variant === 'transparent'}
 >
   <div class="header-container">
-    <a href="/" class="logo-link" aria-label="85 Conseil & Recrutement - Accueil">
+    <a href="{base}/" class="logo-link" aria-label="85 Conseil & Recrutement - Accueil">
       <Logo size="sm" />
       <div class="logo-text">
         <span class="logo-name">85 Conseil</span>
@@ -52,7 +53,7 @@
       <Button
         variant={variant === 'transparent' ? 'outline' : 'primary'}
         size="sm"
-        href="/#contact"
+        href="{base}/#contact"
       >
         Contact
       </Button>
@@ -79,7 +80,7 @@
           {item.label}
         </a>
       {/each}
-      <Button variant="primary" size="sm" href="/#contact" fullWidth>Contact</Button>
+      <Button variant="primary" size="sm" href="{base}/#contact" fullWidth>Contact</Button>
     </nav>
   {/if}
 </header>
