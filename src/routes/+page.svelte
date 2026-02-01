@@ -1,163 +1,139 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { Hero, ExpertiseSection, ValueProposition } from '$lib/components/organisms';
+  import { QuoteBlock } from '$lib/components/molecules';
+
+  const expertises = [
+    {
+      title: 'IT & Digital',
+      items: ['DSI', 'CTO', 'Data', 'Engineering', 'Cybersécurité'],
+    },
+    {
+      title: 'Industrie',
+      items: ["Direction d'usine", 'Ingénierie', 'Méthodes', 'Maintenance'],
+    },
+    {
+      title: 'Finance',
+      items: ['Direction financière', 'Contrôle de gestion'],
+    },
+    {
+      title: 'Ressources Humaines',
+      items: ['DRH', 'RRH', 'Développement RH'],
+    },
+    {
+      title: 'Fonctions clés',
+      items: ['Cadres dirigeants', 'Experts', 'Directions opérationnelles'],
+    },
+  ];
+
+  const valueItems = [
+    {
+      title: 'Postes clés',
+      description: 'Nous intervenons lorsque le recrutement ne peut être standardisé.',
+    },
+    {
+      title: 'Environnements exigeants',
+      description: 'Des contextes où chaque décision de recrutement est structurante.',
+    },
+    {
+      title: 'Travail sur mesure',
+      description: "Chaque mission est traitée avec la précision d'un travail artisanal.",
+    },
+  ];
 </script>
 
-<main>
-  <section class="hero">
-    <div class="logo">
-      <span class="number">85</span>
-    </div>
-    <h1>quatre-vingt-cinq</h1>
-    <p class="tagline">L'excellence au service de l'innovation</p>
-  </section>
+<svelte:head>
+  <title>85 Conseil & Recrutement | Expertise</title>
+</svelte:head>
 
-  <section class="content">
-    <div class="card">
-      <h2>Notre Vision</h2>
-      <p>
-        Quatre-vingt-cinq incarne la perfection dans chaque détail.
-        Nous créons des expériences numériques qui marquent les esprits.
+<Hero
+  overline="Artisan du recrutement"
+  title="Recruter est un métier."
+  titleHighlight="Le nôtre est un artisanat."
+  subtitle="Cabinet indépendant de chasse de têtes, spécialisé dans les recrutements à fort impact humain et opérationnel."
+  variant="default"
+  showLogo
+  ctaLabel="Découvrir notre méthode"
+  ctaHref="/methode"
+/>
+
+<ValueProposition items={valueItems} />
+
+<ExpertiseSection title="Domaines d'intervention" {expertises} />
+
+<section class="quote-section">
+  <div class="container">
+    <QuoteBlock
+      quote="Nous intervenons lorsque le recrutement ne peut être standardisé : postes clés, environnements exigeants, décisions engageantes."
+      variant="centered"
+    />
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="contact-title">Parlons de votre projet</h2>
+      <p class="contact-text">
+        Vous avez un recrutement stratégique à réaliser ? Contactez-nous pour échanger sur votre
+        besoin.
       </p>
+      <a href="mailto:contact@85conseil.fr" class="contact-link">contact@85conseil.fr</a>
     </div>
-
-    <div class="card">
-      <h2>Notre Approche</h2>
-      <p>
-        Alliant créativité et expertise technique, nous transformons
-        vos idées en réalités digitales exceptionnelles.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Notre Engagement</h2>
-      <p>
-        Chaque projet est une nouvelle opportunité de repousser
-        les limites et d'atteindre l'excellence.
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; {new Date().getFullYear()} quatre-vingt-cinq. Tous droits réservés.</p>
-  </footer>
-</main>
+  </div>
+</section>
 
 <style>
-  main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  .quote-section {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-bg-secondary);
   }
 
-  .hero {
+  .container {
+    max-width: var(--container-lg);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+  }
+
+  .contact-section {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 70vh;
     text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    position: relative;
-    overflow: hidden;
+    gap: var(--space-6);
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(233, 69, 96, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(233, 69, 96, 0.08) 0%, transparent 40%);
-    pointer-events: none;
-  }
-
-  .logo {
-    position: relative;
-    margin-bottom: 2rem;
-  }
-
-  .number {
+  .contact-title {
     font-family: var(--font-display);
-    font-size: clamp(6rem, 20vw, 12rem);
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--color-accent);
-    text-stroke: 2px var(--color-accent);
-    line-height: 1;
-    animation: pulse 3s ease-in-out infinite;
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-semibold);
+    margin: 0;
   }
 
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.02);
-    }
+  .contact-text {
+    font-size: var(--text-lg);
+    opacity: 0.85;
+    max-width: 500px;
+    margin: 0;
   }
 
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: lowercase;
-  }
-
-  .tagline {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: var(--color-text);
-    opacity: 0.8;
-    max-width: 600px;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .card {
-    background: var(--color-secondary);
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--color-accent);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 40px rgba(233, 69, 96, 0.15);
-  }
-
-  .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-medium);
     color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
   }
 
-  .card p {
-    color: var(--color-text);
-    opacity: 0.9;
-  }
-
-  footer {
-    margin-top: auto;
-    padding: 2rem;
-    text-align: center;
-    background: var(--color-secondary);
-  }
-
-  footer p {
-    opacity: 0.7;
-    font-size: 0.875rem;
+  .contact-link:hover {
+    opacity: 0.8;
   }
 </style>
