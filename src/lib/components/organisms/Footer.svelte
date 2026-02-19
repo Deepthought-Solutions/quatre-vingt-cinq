@@ -4,7 +4,14 @@
 
   const currentYear = new Date().getFullYear();
 
-  const expertises = ['IT & Digital', 'Industrie', 'Finance', 'RH', 'Droit & Juridique', 'Fonctions clés'];
+  const expertises = [
+    'IT & Digital',
+    'Industrie',
+    'Finance',
+    'RH',
+    'Droit & Juridique',
+    'Fonctions clés',
+  ];
 
   const navigation = [
     { href: `${base}/`, label: 'Expertise' },

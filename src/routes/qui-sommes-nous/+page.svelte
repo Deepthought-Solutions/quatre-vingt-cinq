@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Hero, EngagementsSection } from '$lib/components/organisms';
-  import { QuoteBlock } from '$lib/components/molecules';
   import { Text, Button } from '$lib/components/atoms';
 
   const engagements = [
@@ -49,8 +48,8 @@
       <Text variant="lead">
         85 Conseil & Recrutement est un cabinet à taille humaine, fondé sur une relation directe
         entre le dirigeant et son recruteur. Chaque mission est pilotée personnellement, sans
-        délégation, sans automatisation, sans standardisation. Nous assumons un recrutement exigeant,
-        responsable et durable.
+        délégation, sans automatisation, sans standardisation. Nous assumons un recrutement
+        exigeant, responsable et durable.
       </Text>
     </div>
   </div>
@@ -109,7 +108,12 @@
       </p>
     </div>
 
-    <form class="contact-form" action="mailto:contact@quatre-vingt-cinq.fr" method="POST" enctype="text/plain">
+    <form
+      class="contact-form"
+      action="mailto:contact@quatre-vingt-cinq.fr"
+      method="POST"
+      enctype="text/plain"
+    >
       <div class="form-grid">
         <div class="form-field">
           <label for="name" class="form-label">Nom et prénom</label>
@@ -225,7 +229,12 @@
   .founder-photo-placeholder {
     width: 180px;
     height: 220px;
-    background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-primary) 50%, var(--color-accent-dark) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--color-gray-800) 0%,
+      var(--color-primary) 50%,
+      var(--color-accent-dark) 100%
+    );
     border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
@@ -369,7 +378,9 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-3) var(--space-4);
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition:
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
     width: 100%;
     box-sizing: border-box;
   }

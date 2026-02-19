@@ -82,7 +82,9 @@
         Vous avez un recrutement stratégique à réaliser ? Contactez-nous pour échanger sur votre
         besoin.
       </p>
-      <a href="mailto:contact@quatre-vingt-cinq.fr" class="contact-link">contact@quatre-vingt-cinq.fr</a>
+      <a href="mailto:contact@quatre-vingt-cinq.fr" class="contact-link"
+        >contact@quatre-vingt-cinq.fr</a
+      >
     </div>
   </div>
 </section>
