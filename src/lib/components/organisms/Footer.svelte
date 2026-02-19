@@ -4,7 +4,7 @@
 
   const currentYear = new Date().getFullYear();
 
-  const expertises = ['IT & Digital', 'Industrie', 'Finance', 'RH', 'Fonctions clés'];
+  const expertises = ['IT & Digital', 'Industrie', 'Finance', 'RH', 'Droit & Juridique', 'Fonctions clés'];
 
   const navigation = [
     { href: `${base}/`, label: 'Expertise' },
@@ -53,7 +53,7 @@
           </address>
           <div class="social-links">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/85-conseil-et-recrutement/?viewAsMember=true"
               class="social-link"
               aria-label="LinkedIn"
               target="_blank"

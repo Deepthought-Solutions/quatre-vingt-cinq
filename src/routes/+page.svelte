@@ -21,6 +21,10 @@
       items: ['DRH', 'RRH', 'Développement RH'],
     },
     {
+      title: 'Droit & Juridique',
+      items: ['Directeur Juridique', 'Juriste Senior', 'Compliance', 'RGPD'],
+    },
+    {
       title: 'Fonctions clés',
       items: ['Cadres dirigeants', 'Experts', 'Directions opérationnelles'],
     },
@@ -78,7 +82,7 @@
         Vous avez un recrutement stratégique à réaliser ? Contactez-nous pour échanger sur votre
         besoin.
       </p>
-      <a href="mailto:contact@85conseil.fr" class="contact-link">contact@85conseil.fr</a>
+      <a href="mailto:contact@quatre-vingt-cinq.fr" class="contact-link">contact@quatre-vingt-cinq.fr</a>
     </div>
   </div>
 </section>

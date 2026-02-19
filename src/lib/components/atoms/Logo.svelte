@@ -6,7 +6,7 @@
 
   let { size = 'md', animated = false }: Props = $props();
 
-  const sizes = {
+  const heights = {
     sm: '2rem',
     md: '3rem',
     lg: '4.5rem',
@@ -14,28 +14,21 @@
   };
 </script>
 
-<div class="logo" class:animated style="--logo-size: {sizes[size]}">
-  <span class="logo-number">85</span>
+<div class="logo" class:animated style="--logo-height: {heights[size]}">
+  <img src="/logo_85.jpeg" alt="85 Conseil et Recrutement" class="logo-img" />
 </div>
 
 <style>
   .logo {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: var(--logo-size);
-    height: var(--logo-size);
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-accent);
   }
 
-  .logo-number {
-    font-family: var(--font-display);
-    font-size: calc(var(--logo-size) * 0.45);
-    font-weight: var(--weight-bold);
-    color: var(--color-white);
-    letter-spacing: var(--tracking-tight);
+  .logo-img {
+    height: var(--logo-height);
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2);
   }
 
   .animated {
@@ -45,10 +38,10 @@
   @keyframes pulse {
     0%,
     100% {
-      box-shadow: var(--shadow-accent);
+      filter: grayscale(100%) contrast(1.2);
     }
     50% {
-      box-shadow: var(--shadow-accent-lg);
+      filter: grayscale(100%) contrast(1.2) drop-shadow(0 0 8px rgba(201, 162, 39, 0.4));
     }
   }
 </style>

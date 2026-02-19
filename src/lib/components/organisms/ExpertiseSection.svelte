@@ -28,7 +28,7 @@
     </div>
 
     <div class="location-badge">
-      <span class="location-text">Centre-Val de Loire · Île-de-France · National</span>
+      <span class="location-text">Île-de-France · Centre-Val de Loire · National</span>
     </div>
   </div>
 </section>

@@ -39,6 +39,11 @@
       title: 'Pas de volume',
       description: 'Nous ne traitons jamais le recrutement comme un volume.',
     },
+    {
+      title: 'Un réseau qualifié',
+      description:
+        "Nous nous appuyons sur un réseau d'experts et de dirigeants soigneusement identifiés, activé de manière ciblée selon chaque mission.",
+    },
   ];
 </script>
 
@@ -57,6 +62,18 @@
   variant="default"
 />
 
+<section class="intro-section">
+  <div class="container">
+    <SectionHeader title="Notre travail consiste à :" align="left" />
+    <ul class="work-list">
+      <li>Comprendre précisément votre besoin</li>
+      <li>Cartographier votre marché</li>
+      <li>Approcher individuellement les profils pertinents</li>
+      <li>Évaluer leur capacité à s'inscrire durablement dans votre organisation</li>
+    </ul>
+  </div>
+</section>
+
 <section class="principles-section">
   <div class="container">
     <div class="principles-grid">
@@ -72,23 +89,11 @@
   </div>
 </section>
 
-<section class="intro-section">
-  <div class="container">
-    <SectionHeader title="Notre travail consiste à :" align="left" />
-    <ul class="work-list">
-      <li>comprendre précisément un besoin,</li>
-      <li>cartographier un marché,</li>
-      <li>approcher individuellement les profils pertinents,</li>
-      <li>évaluer leur capacité à s'inscrire durablement dans votre organisation.</li>
-    </ul>
-  </div>
-</section>
-
 <MethodSection
   overline="Les étapes"
   title="Notre méthode"
   steps={methodSteps}
-  quote="L'artisan ne va pas vite. Il va juste."
+  quote="Une chasse artisanale, une approche profondément humaine."
 />
 
 <style>

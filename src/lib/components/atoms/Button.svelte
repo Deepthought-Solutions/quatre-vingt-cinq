@@ -8,6 +8,7 @@
     disabled?: boolean;
     fullWidth?: boolean;
     children: Snippet;
+    type?: 'button' | 'submit' | 'reset';
     onclick?: (_event: MouseEvent) => void;
   }
 
@@ -18,6 +19,7 @@
     disabled = false,
     fullWidth = false,
     children,
+    type = 'button',
     onclick,
   }: Props = $props();
 
@@ -33,7 +35,7 @@
     {@render children()}
   </a>
 {:else}
-  <button class={classes} {disabled} {onclick} type="button">
+  <button class={classes} {disabled} {onclick} {type}>
     {@render children()}
   </button>
 {/if}
