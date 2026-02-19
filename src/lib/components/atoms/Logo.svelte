@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths';
+
   interface Props {
     size?: 'sm' | 'md' | 'lg' | 'xl';
     animated?: boolean;
@@ -15,7 +17,7 @@
 </script>
 
 <div class="logo" class:animated style="--logo-height: {heights[size]}">
-  <img src="/logo_85.jpeg" alt="85 Conseil et Recrutement" class="logo-img" />
+  <img src="{base}/logo_85.jpeg" alt="85 Conseil et Recrutement" class="logo-img" />
 </div>
 
 <style>
