@@ -116,25 +116,6 @@
     text-decoration: none;
   }
 
-  .logo-text {
-    font-family: var(--font-display);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-semibold);
-    color: var(--color-text-primary);
-    white-space: nowrap;
-    letter-spacing: var(--tracking-wide);
-  }
-
-  .variant-transparent .logo-text {
-    color: var(--color-white);
-  }
-
-  .logo-separator {
-    color: var(--color-accent);
-    margin-inline: var(--space-2);
-    font-weight: var(--weight-light);
-  }
-
   /* Desktop nav */
   .desktop-nav {
     display: none;
