@@ -116,7 +116,7 @@
   /* Container Widths */
   --container-sm: 640px;
   --container-md: 768px;
-  --container-lg: 1024px;
+  --container-lg: 960px;
   --container-xl: 1280px;
   --container-2xl: 1536px;
 
@@ -124,7 +124,7 @@
   --container-padding: clamp(var(--space-4), 5vw, var(--space-8));
 
   /* Section Spacing */
-  --section-padding-y: clamp(var(--space-16), 10vw, var(--space-24));
+  --section-padding-y: clamp(var(--space-20), 12vw, var(--space-32));
 
   /* ===== BORDERS ===== */
 

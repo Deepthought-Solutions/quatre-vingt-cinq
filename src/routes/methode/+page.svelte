@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Hero, MethodSection } from '$lib/components/organisms';
-  import { SectionHeader, Card } from '$lib/components/molecules';
+  import { Card } from '$lib/components/molecules';
   import { Text } from '$lib/components/atoms';
 
   const methodSteps = [
@@ -58,13 +58,13 @@
 <Hero
   overline="Notre méthode"
   title="Une chasse artisanale,"
-  titleHighlight="directe et confidentielle."
+  titleHighlight="une approche profondément humaine."
   variant="default"
 />
 
 <section class="intro-section">
   <div class="container">
-    <SectionHeader title="Notre travail consiste à :" align="left" />
+    <h2 class="intro-title">NOTRE TRAVAIL CONSISTE À :</h2>
     <ul class="work-list">
       <li>Comprendre précisément votre besoin</li>
       <li>Cartographier votre marché</li>
@@ -136,6 +136,15 @@
 
   .intro-section .container {
     max-width: var(--container-lg);
+  }
+
+  .intro-title {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-primary);
+    letter-spacing: var(--tracking-widest);
+    margin: 0;
   }
 
   .work-list {

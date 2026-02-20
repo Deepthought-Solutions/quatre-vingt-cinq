@@ -59,7 +59,20 @@
   showLogo
   ctaLabel="Découvrir notre méthode"
   ctaHref="{base}/methode"
-/>
+>
+  {#snippet children()}
+    <div class="credibility-block">
+      <div class="credibility-items">
+        <span class="credibility-item">Approche directe exclusivement</span>
+        <span class="credibility-sep">·</span>
+        <span class="credibility-item">Un interlocuteur unique</span>
+        <span class="credibility-sep">·</span>
+        <span class="credibility-item">Recrutements stratégiques</span>
+      </div>
+      <p class="credibility-sectors">IT · Industrie · Finance · RH · Juridique</p>
+    </div>
+  {/snippet}
+</Hero>
 
 <ValueProposition items={valueItems} />
 
@@ -79,12 +92,11 @@
     <div class="contact-content">
       <h2 class="contact-title">Parlons de votre projet</h2>
       <p class="contact-text">
-        Vous avez un recrutement stratégique à réaliser ? Contactez-nous pour échanger sur votre
-        besoin.
+        Vous avez un recrutement stratégique à conduire ? Échangeons sur votre contexte et vos
+        enjeux. Nous vous répondrons avec la discrétion et l'exigence qui caractérisent notre
+        approche.
       </p>
-      <a href="mailto:contact@quatre-vingt-cinq.fr" class="contact-link"
-        >contact@quatre-vingt-cinq.fr</a
-      >
+      <a href="{base}/qui-sommes-nous#contact" class="contact-cta">Nous contacter</a>
     </div>
   </div>
 </section>
@@ -129,18 +141,57 @@
     margin: 0;
   }
 
-  .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--text-xl);
-    font-weight: var(--weight-medium);
-    color: var(--color-accent);
+  .contact-cta {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-md);
     text-decoration: none;
-    transition: opacity var(--transition-fast);
+    transition:
+      background-color var(--transition-fast),
+      opacity var(--transition-fast);
   }
 
-  .contact-link:hover {
-    opacity: 0.8;
+  .contact-cta:hover {
+    opacity: 0.9;
+  }
+
+  /* Credibility block */
+  .credibility-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .credibility-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .credibility-item {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-white);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .credibility-sep {
+    color: var(--color-accent);
+    font-size: var(--text-base);
+  }
+
+  .credibility-sectors {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: var(--tracking-wider);
+    margin: 0;
   }
 </style>

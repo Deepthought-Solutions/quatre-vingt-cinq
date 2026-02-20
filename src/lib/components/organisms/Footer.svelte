@@ -28,7 +28,6 @@
           <Logo size="md" />
         </a>
         <div class="brand-info">
-          <h3 class="brand-name">85 Conseil & Recrutement</h3>
           <Text variant="caption" color="muted">Artisan du recrutement par approche directe</Text>
         </div>
       </div>
@@ -55,7 +54,8 @@
         <div class="footer-column">
           <h4 class="column-title">Contact</h4>
           <address class="contact-info">
-            <Text variant="body-sm" color="secondary" as="span">Chartres</Text>
+            <Text variant="body-sm" color="secondary" as="span">Île-de-France</Text>
+            <Text variant="body-sm" color="secondary" as="span">Centre-Val de Loire</Text>
             <Text variant="body-sm" color="secondary" as="span">Intervention nationale</Text>
           </address>
           <div class="social-links">
