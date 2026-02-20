@@ -132,14 +132,6 @@
     gap: var(--space-1);
   }
 
-  .brand-name {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: var(--weight-semibold);
-    color: var(--color-text-primary);
-    margin: 0;
-  }
-
   /* Columns */
   .footer-columns {
     display: grid;
