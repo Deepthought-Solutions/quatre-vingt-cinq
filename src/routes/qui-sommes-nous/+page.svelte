@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Hero, EngagementsSection } from '$lib/components/organisms';
   import { Text, Button } from '$lib/components/atoms';
 
@@ -59,9 +60,11 @@
   <div class="container">
     <div class="founder-content">
       <div class="founder-photo-wrapper">
-        <div class="founder-photo-placeholder">
-          <span class="founder-initials">SA</span>
-        </div>
+        <img
+          src="{base}/samuel_picture.jpg"
+          alt="Samuel Assoun — Fondateur"
+          class="founder-photo"
+        />
         <p class="founder-caption">Samuel Assoun — Fondateur & Consultant</p>
       </div>
       <div class="founder-info">
@@ -226,28 +229,13 @@
     flex-shrink: 0;
   }
 
-  .founder-photo-placeholder {
+  .founder-photo {
     width: 180px;
     height: 220px;
-    background: linear-gradient(
-      135deg,
-      var(--color-gray-800) 0%,
-      var(--color-primary) 50%,
-      var(--color-accent-dark) 100%
-    );
+    object-fit: cover;
     border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: var(--shadow-lg);
-  }
-
-  .founder-initials {
-    font-family: var(--font-display);
-    font-size: var(--text-4xl);
-    font-weight: var(--weight-bold);
-    color: var(--color-accent);
-    opacity: 0.6;
+    background-color: var(--color-gray-800);
   }
 
   .founder-caption {

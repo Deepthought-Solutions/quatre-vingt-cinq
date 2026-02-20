@@ -35,10 +35,6 @@
   <div class="header-container">
     <a href="{base}/" class="logo-link" aria-label="85 Conseil & Recrutement - Accueil">
       <Logo size="sm" />
-      <div class="logo-text">
-        <span class="logo-name">85 Conseil</span>
-        <span class="logo-tagline">Recrutement</span>
-      </div>
     </a>
 
     <nav class="desktop-nav" aria-label="Navigation principale">
@@ -121,31 +117,22 @@
   }
 
   .logo-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .logo-name {
     font-family: var(--font-display);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     font-weight: var(--weight-semibold);
     color: var(--color-text-primary);
-    line-height: var(--leading-tight);
-  }
-
-  .variant-transparent .logo-name {
-    color: var(--color-white);
-  }
-
-  .logo-tagline {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--color-text-muted);
+    white-space: nowrap;
     letter-spacing: var(--tracking-wide);
   }
 
-  .variant-transparent .logo-tagline {
-    color: rgba(255, 255, 255, 0.7);
+  .variant-transparent .logo-text {
+    color: var(--color-white);
+  }
+
+  .logo-separator {
+    color: var(--color-accent);
+    margin-inline: var(--space-2);
+    font-weight: var(--weight-light);
   }
 
   /* Desktop nav */
